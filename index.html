@@ -5,22 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Narek shop</title>
     <link rel="stylesheet" href="style.css">
-    <script src="js.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Giler marketpalce</h1>
-        <div class="cart">
-            <button class="cart-button" onclick="openCard()">
-                <img src="img/cart.png" alt="cart">
-            </button>
-            <div class="products" id="hide">
-                Cart is empty
-            </div>
+
+<header>
+    <h1>Halal marketplace</h1>
+
+    <div class="cart">
+        <button class="cart-button" onclick="toggleCart()">
+            🛒 Cart
+        </button>
+        <div class="cart-box" id="cartBox">
+            <p id="cartEmpty">Cart is empty</p>
+            <ul id="cartItems"></ul>
+            <p class="total">Total: <span id="totalPrice">0</span> ₴</p>
         </div>
-    </header>
-    <main>
-        <div class="products-grid"></div>
-    </main>
+    </div>
+</header>
+
+<main>
+    <div class="products-grid" id="products"></div>
+</main>
+
+<script src="js.js"></script>
 </body>
 </html>
